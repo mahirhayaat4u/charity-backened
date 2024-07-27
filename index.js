@@ -4,6 +4,9 @@ const routes=require("./routes/User")
 const db=require("../Backened/config/db")
 
 const cors = require("cors");
+require('dotenv').config();
+
+const PORT=process.config.PORT || 4000;
 
 db.connect();
 
@@ -25,6 +28,6 @@ app.get("/",(req,res)=>{
     });
 });
 
-app.listen(4000,()=>{
-    console.log("app is running on port 4000");
+app.listen(PORT,()=>{
+    console.log(`app is running on port ${PORT}`);
 })
