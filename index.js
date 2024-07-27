@@ -6,7 +6,7 @@ const db=require("../Backened/config/db")
 const cors = require("cors");
 require('dotenv').config();
 
-const PORT=process.config.PORT || 4000;
+const PORT=process.env.PORT || 4000;
 
 db.connect();
 
